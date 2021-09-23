@@ -34,7 +34,8 @@ const ThoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: 'If you want to leave your thought, LEAVE YOUR THOUGHT!',
-            // Must be between 1 and 280 characters
+            minlength: 1,
+            maxlength: 280
         },
         createdAt: {
             type: Date,

@@ -10,7 +10,7 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: true,
-            // 280 character minimum
+            maxlength: 280
         },
         username: {
             type: String,
@@ -24,7 +24,6 @@ const ReactionSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: true,
             getters: true
         }
     }
